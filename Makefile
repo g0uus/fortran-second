@@ -5,21 +5,21 @@
 all: second
 
 second: second.o series_routines.o common_data.o
-	gfortran -o second second.o series_routines.o common_data.o
+	gfortran -g -o second second.o series_routines.o common_data.o
 
 
-second.o: second.f90 common_data.f90 series_routines.f90
-	gfortran -c second.f90
+second.o: second.f90 common_data.o series_routines.o
+	gfortran -g -c second.f90
 
 series_routines.o: series_routines.f90
-	gfortran -c series_routines.f90
+	gfortran -g -c series_routines.f90
 
 common_data.o: common_data.f90
-	gfortran -c common_data.f90
+	gfortran -g -c common_data.f90
 
 
 clean:
-	rm -f second.o second
+	rm -f *.o *.mod second
 
 .PHONY: all clean
 
