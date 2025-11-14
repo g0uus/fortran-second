@@ -1,4 +1,7 @@
 MODULE series_routines !***** example module *****
+
+   USE common_data
+   
    IMPLICIT NONE
 
 CONTAINS

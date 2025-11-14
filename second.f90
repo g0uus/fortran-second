@@ -5,12 +5,11 @@ PROGRAM sine_expansion
 
    IMPLICIT NONE
 
-!   DOUBLE PRECISION, PARAMETER :: pi = 3.14159265358979323846
    real(16), DIMENSION(20) :: x, series
    INTEGER :: i
 
    DO i=1,20 !*** Define the range of x values to use
-      x(i)=2.0D0*pi*(i-1)/19D0
+      x(i)=TWO_PI*(i-1)/19D0
    END DO
 
    series=expand_sine(x) !**** sin(x) up to five terms
