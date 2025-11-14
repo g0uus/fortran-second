@@ -7,7 +7,6 @@ all: second
 second: second.o series_routines.o common_data.o
 	gfortran -g -o second second.o series_routines.o common_data.o
 
-
 second.o: second.f90 common_data.o series_routines.o
 	gfortran -g -c second.f90
 
